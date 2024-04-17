@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// https://zenn.dev/r0227n/articles/flutter_web_deploy_github_pages
+// https://www.google.com/search?q=flutte+web+github&oq=flutte+web+github&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIJCAEQABgNGIAEMggIAhAAGA0YHjIICAMQABgNGB4yCAgEEAAYDRgeMgoIBRAAGAgYDRgeMgYIBhBFGDwyBggHEEUYPNIBCDkyMTJqMGo3qAIIsAIB&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:cc864456,vid:4lN22IKU5aU,st:0
 
 void main() {
   runApp(const MyApp());

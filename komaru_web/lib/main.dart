@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
-// https://www.google.com/search?q=flutte+web+github&oq=flutte+web+github&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIJCAEQABgNGIAEMggIAhAAGA0YHjIICAMQABgNGB4yCAgEEAAYDRgeMgoIBRAAGAgYDRgeMgYIBhBFGDwyBggHEEUYPNIBCDkyMTJqMGo3qAIIsAIB&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:cc864456,vid:4lN22IKU5aU,st:0
+import 'package:flex_color_scheme/flex_color_scheme.dart';
+import 'package:komaru_web/pages/widgets/widget_styles.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,9 +14,38 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Komaru Flutter',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrangeAccent),
+      theme: FlexThemeData.light(
+        scheme: FlexScheme.tealM3,
+        surfaceMode: FlexSurfaceMode.levelSurfacesLowScaffold,
+        blendLevel: 7,
+        subThemesData: const FlexSubThemesData(
+          blendOnLevel: 10,
+          blendOnColors: false,
+          useTextTheme: true,
+          useM2StyleDividerInM3: true,
+          alignedDropdown: true,
+          useInputDecoratorThemeInDialogs: true,
+        ),
+        visualDensity: FlexColorScheme.comfortablePlatformDensity,
         useMaterial3: true,
+        swapLegacyOnMaterial3: true,
+        fontFamily: WidgetStyles.primaryFontName,
+      ),
+      darkTheme: FlexThemeData.dark(
+        scheme: FlexScheme.tealM3,
+        surfaceMode: FlexSurfaceMode.levelSurfacesLowScaffold,
+        blendLevel: 13,
+        subThemesData: const FlexSubThemesData(
+          blendOnLevel: 20,
+          useTextTheme: true,
+          useM2StyleDividerInM3: true,
+          alignedDropdown: true,
+          useInputDecoratorThemeInDialogs: true,
+        ),
+        visualDensity: FlexColorScheme.comfortablePlatformDensity,
+        useMaterial3: true,
+        swapLegacyOnMaterial3: true,
+        fontFamily: WidgetStyles.primaryFontName,
       ),
       home: const MyHomePage(title: 'Komaru Flutter Page'),
     );
@@ -45,7 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        //backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
       body: Center(

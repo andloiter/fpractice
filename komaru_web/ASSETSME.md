@@ -2,11 +2,11 @@
 
 ## - assets/images/
 https://www.irasutoya.com/p/terms.html
-「いらすとや」さん：アイコンに使わせてもらっています。20点までと
+「いらすとや」さん：様々に使わせてもらっています。本ウェブは非商用です。商用使用の場合、20点までと
 
 ## - assets/sounds/
 https://maou.audio/rule/
-「魔王魂」さん：おもしろい音がいっぱい。ありがとうございます。
+「魔王魂」さん：おもしろい音がいっぱい。
 
 ## - assets/fonts/
 https://fonts.google.com/specimen/Murecho?subset=japanese

@@ -25,6 +25,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.11.3"
+  ansicolor:
+    dependency: transitive
+    description:
+      name: ansicolor
+      sha256: "8bf17a8ff6ea17499e40a2d2542c2f481cd7615760c6d34065cb22bfd22e6880"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.2"
   args:
     dependency: transitive
     description:
@@ -339,6 +347,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.1"
+  flutter_riverpod:
+    dependency: "direct main"
+    description:
+      name: flutter_riverpod
+      sha256: "0f1974eff5bbe774bf1d870e406fc6f29e3d6f1c46bd9c58e7172ff68a785d7d"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.5.1"
   flutter_slidable:
     dependency: transitive
     description:
@@ -385,7 +401,7 @@ packages:
     source: sdk
     version: "0.0.0"
   flutter_web_plugins:
-    dependency: transitive
+    dependency: "direct main"
     description: flutter
     source: sdk
     version: "0.0.0"
@@ -421,6 +437,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.2"
+  google_fonts:
+    dependency: "direct main"
+    description:
+      name: google_fonts
+      sha256: b1ac0fe2832c9cc95e5e88b57d627c5e68c223b9657f4b96e1487aa9098c7b82
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.2.1"
   graphs:
     dependency: transitive
     description:
@@ -501,14 +525,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.8.4"
-  katana_builder:
-    dependency: transitive
-    description:
-      name: katana_builder
-      sha256: "462c7732c8a1f4b3b39693cd8c4199fd5d356345d73585189842596775be6f54"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.1.6"
   katana_form:
     dependency: "direct main"
     description:
@@ -606,7 +622,7 @@ packages:
     source: hosted
     version: "2.1.5"
   katana_router:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: katana_router
       sha256: "7219557fe289f19e351b9028aa90c877aa3e06ef0760c74efccf6262e40a9928"
@@ -621,14 +637,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.5"
-  katana_router_builder:
-    dependency: "direct dev"
-    description:
-      name: katana_router_builder
-      sha256: "54cf53ce9961230a572078ffd8abcf7c3ebad4e24c4d8db4f1727e9265ed7c84"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.1.7"
   katana_scoped:
     dependency: transitive
     description:
@@ -713,10 +721,10 @@ packages:
     dependency: transitive
     description:
       name: logger
-      sha256: "8c94b8c219e7e50194efc8771cd0e9f10807d8d3e219af473d89b06cc2ee4e04"
+      sha256: "6bbb9d6f7056729537a4309bda2e74e18e5d9f14302489cc1e93f33b3fe32cac"
       url: "https://pub.dev"
     source: hosted
-    version: "2.2.0"
+    version: "2.0.2+1"
   logging:
     dependency: transitive
     description:
@@ -998,7 +1006,7 @@ packages:
     source: hosted
     version: "0.2.8"
   riverpod:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: riverpod
       sha256: f21b32ffd26a36555e501b04f4a5dca43ed59e16343f1a30c13632b2351dfa4d
@@ -1029,6 +1037,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.4.0"
+  roggle:
+    dependency: "direct main"
+    description:
+      name: roggle
+      sha256: d2b3550cf952cb7e55929c7f4b8e8e6cf1536b4652218e44846122c7bac78f45
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.4.2+1"
+  routefly:
+    dependency: "direct main"
+    description:
+      name: routefly
+      sha256: b1ecd47943331b1dba744911a91907020a0b2dcdad0a0a8a40c94a418367b5bf
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.9"
   rxdart:
     dependency: transitive
     description:
@@ -1133,19 +1157,43 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.0"
-  simple_logger:
-    dependency: "direct main"
-    description:
-      name: simple_logger
-      sha256: bd3f09099a890f5f66cd27a39e5422f4e27b5e7cf4c5a7331569e86d89846898
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.9.0+3"
   sky_engine:
     dependency: transitive
     description: flutter
     source: sdk
     version: "0.0.99"
+  soundpool:
+    dependency: "direct main"
+    description:
+      name: soundpool
+      sha256: fe7302005759d6a3561de1711e3ea818b1ba025a62375b469196dda5b654bd38
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.4.1"
+  soundpool_macos:
+    dependency: transitive
+    description:
+      name: soundpool_macos
+      sha256: e0440a19d4e8f344dace336923b369184e91eebbbd8348266f4434b675bd15db
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.3.0"
+  soundpool_platform_interface:
+    dependency: transitive
+    description:
+      name: soundpool_platform_interface
+      sha256: "7c6666e19319151b2036c4fc9b6da3a83f2ebf4097989e6ba1c2b0bfe3612e9f"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.2.0"
+  soundpool_web:
+    dependency: transitive
+    description:
+      name: soundpool_web
+      sha256: "3d1eb8d6cceb8a0aec38ff9aec4fbd11a9a8101d27b27a6eb29305b83d46aee5"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.3.0"
   source_gen:
     dependency: transitive
     description:
@@ -1211,7 +1259,7 @@ packages:
     source: hosted
     version: "1.2.0"
   synchronized:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: synchronized
       sha256: "539ef412b170d65ecdafd780f924e5be3f60032a1128df156adad6c5b373d558"
@@ -1444,4 +1492,4 @@ packages:
     version: "3.1.2"
 sdks:
   dart: ">=3.3.1 <4.0.0"
-  flutter: ">=3.19.0"
+  flutter: ">=3.19.2"

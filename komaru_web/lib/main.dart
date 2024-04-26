@@ -1,101 +1,62 @@
 import 'package:flutter/material.dart';
-import 'package:flex_color_scheme/flex_color_scheme.dart';
-import 'package:komaru_web/pages/widgets/widget_styles.dart';
+import 'package:flutter_web_plugins/url_strategy.dart';
+
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:routefly/routefly.dart';
+
+import 'package:komaru_web/core/core_imports.dart';
+import 'package:komaru_web/infrastructure/infrastructure_imports.dart';
+import 'package:komaru_web/app/styles/theme_styles.dart';
+import 'package:komaru_web/routes.dart';
 
 void main() {
-  runApp(const MyApp());
+  // ブラウザURL
+  usePathUrlStrategy();
+
+  runApp(const ProviderScope(child: MainApplication()));
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MainApplication extends ConsumerStatefulWidget {
+  const MainApplication({super.key});
+
+  @override
+  MainApplicationState createState() => MainApplicationState();
+}
+
+class MainApplicationState extends ConsumerState<MainApplication> {
+  @override
+  void initState() {
+    LoggerHelper.instance.logDebug('${runtimeType.toString()} initState');
+    super.initState();
+    try {} on Error catch (e, s) {
+      LoggerHelper.instance.logErrorTrace(
+          '${runtimeType.toString()} initState error. ${e.toString()}', e, s);
+    } on Exception catch (e, s) {
+      LoggerHelper.instance.logErrorTrace(
+          '${runtimeType.toString()} initState fail. ${e.toString()}', e, s);
+    }
+  }
+
+  @override
+  void dispose() {
+    LoggerHelper.instance.logDebug('${runtimeType.toString()} dispose');
+    // 音
+    SoundHelper.instance.disposeSounds();
+    super.dispose();
+  }
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    LoggerHelper.instance.logDebug('${runtimeType.toString()}: build');
+
+    return MaterialApp.router(
+      routerConfig: Routefly.routerConfig(
+        routes: routes,
+      ),
       title: 'Komaru Flutter',
-      theme: FlexThemeData.light(
-        scheme: FlexScheme.tealM3,
-        surfaceMode: FlexSurfaceMode.levelSurfacesLowScaffold,
-        blendLevel: 7,
-        subThemesData: const FlexSubThemesData(
-          blendOnLevel: 10,
-          blendOnColors: false,
-          useTextTheme: true,
-          useM2StyleDividerInM3: true,
-          alignedDropdown: true,
-          useInputDecoratorThemeInDialogs: true,
-        ),
-        visualDensity: FlexColorScheme.comfortablePlatformDensity,
-        useMaterial3: true,
-        swapLegacyOnMaterial3: true,
-        fontFamily: WidgetStyles.primaryFontName,
-      ),
-      darkTheme: FlexThemeData.dark(
-        scheme: FlexScheme.tealM3,
-        surfaceMode: FlexSurfaceMode.levelSurfacesLowScaffold,
-        blendLevel: 13,
-        subThemesData: const FlexSubThemesData(
-          blendOnLevel: 20,
-          useTextTheme: true,
-          useM2StyleDividerInM3: true,
-          alignedDropdown: true,
-          useInputDecoratorThemeInDialogs: true,
-        ),
-        visualDensity: FlexColorScheme.comfortablePlatformDensity,
-        useMaterial3: true,
-        swapLegacyOnMaterial3: true,
-        fontFamily: WidgetStyles.primaryFontName,
-      ),
-      home: const MyHomePage(title: 'Komaru Flutter Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        //backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      theme: ThemeStyles.instance.getLightFlexScheme(),
+      darkTheme: ThemeStyles.instance.getDarkFlexScheme(),
     );
   }
 }

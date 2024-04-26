@@ -14,6 +14,7 @@ https://zenn.dev/kosukesaigusa/articles/dart-code-generation-1
 https://www.youtube.com/watch?v=c6BPtrU0M7I
 ### GitHubの新機能「GitHub Actions」で試すCI/CD
 https://knowledge.sakura.ad.jp/23478/
+### 「dart pub global activate」と「flutter pub add」の違い
 
 
 ## 2024/04/17 Github Flutter Web

@@ -1,7 +1,6 @@
 # パッケージ用メモになります。
 
 ## 検討中1
-synchronized・・・必要なときがきたら
 freezed関連・・・必要なときがきたら
 file関連・・・必要なときがきたら
 drift・・・必要なときがきたら
@@ -11,6 +10,7 @@ lottie・・・webなかった(´;ω;｀)
 ## 検討中2
 https://www.youtube.com/watch?v=O8WsHrVcHIg
 https://pub.dev/packages/sticker_view
+https://pub.dev/packages/toggle_list
 
 ## 検討中3
 https://www.youtube.com/watch?v=l-qBUrqysnU
@@ -32,28 +32,35 @@ https://pub.dev/packages/grouped_list
 
 # インストール済み
 ## 2024/04/17 flutter_localization 0.2.0 
-pub.dev:https://pub.dev/packages/flutter_localization
+https://pub.dev/packages/flutter_localization
 理由：日本人だから
 
 ## 2024/04/17 shared_preferences 2.2.3
-pub.dev:https://pub.dev/packages/shared_preferences
-理由：機能として勿論欲しいです
+https://pub.dev/packages/shared_preferences
+理由：Webでshared・・・
 
-## 2024/04/17 riverpod 2.5.1、riverpod_generator 2.4.0、riverpod_annotation 2.3.5
-pub.dev:https://pub.dev/packages/riverpod
-pub.dev:https://pub.dev/packages/riverpod_generator
-pub.dev:https://pub.dev/packages/riverpod_annotation
+## 2024/04/17 flutter_riverpod 2.5.1、riverpod_generator 2.4.0、riverpod_annotation 2.3.5
+https://pub.dev/packages/flutter_riverpod
+https://pub.dev/packages/riverpod_generator
+https://pub.dev/packages/riverpod_annotation
 理由：状態遷移3点セット
 
-## 2024/04/17 katana_router 2.2.10、katana_router_builder 2.1.7
-pub.dev:https://pub.dev/packages/katana_router
-pub.dev:https://pub.dev/packages/katana_router_builder
-理由：zennのページを見て、スゴイと思ったから
-https://zenn.dev/mathru/articles/cf13accd3ed502
+## 2024/04/17 routefly 1.0.9
+https://pub.dev/packages/routefly
+理由：ウェブ画面遷移
+実装メモ：appフォルダ配下に*_page.dartを置くこと、rootページはapp/app_page.dartであること
+
+## 2024/04/17 synchronized: ^3.1.0+1
+https://pub.dev/packages/synchronized
+理由：ロック
 
 ## 2024/04/17 flutter_sound 9.4.6
-pub.dev:https://pub.dev/packages/flutter_sound
-理由：な、なんとなく
+https://pub.dev/packages/flutter_sound
+理由：録音もあるから
+実装メモ：エラー解決せず・・・
+## 2024/04/17 soundpool 2.4.1
+https://pub.dev/packages/soundpool
+理由：Androidでやったことあるから
 
 ## 2024/04/17 collection 1.18.0
 https://pub.dev/packages/collection
@@ -76,8 +83,8 @@ https://pub.dev/packages/font_awesome_flutter
 https://pub.dev/packages/flutter_mail_server
 理由：自分のところにメール届くかな
 
-## 2024/04/18 simple_logger 1.9.0+3
-https://pub.dev/packages/simple_logger
+## 2024/04/18 roggle: ^0.4.2+1
+https://pub.dev/packages/roggle
 理由：ログってみなさんどうしてます？
 
 ## 2024/04/18 ui群
@@ -90,6 +97,9 @@ https://pub.dev/packages/fluent_ui
 ### optimus 0.32.0
 https://pub.dev/packages/optimus
 理由：グラフ
+### katana_ui 2.6.6
+https://pub.dev/packages/katana_ui
+理由：ファンだから
 ### katana_form 2.12.11
 https://pub.dev/packages/katana_form
 理由：ファンだから
@@ -105,3 +115,6 @@ https://pub.dev/packages/safe_text
 ### flex_gap 0.3.1
 https://pub.dev/packages/flex_gap
 理由：簡単にきれいになるかな
+### google_fonts 6.2.1 
+https://pub.dev/packages/google_fonts
+理由：フォントで遊んでみたくなったから
